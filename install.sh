@@ -13,7 +13,14 @@ echo "This should output the above IP:"
 echo $(hostname --ip-address)
 
 echo "If not, use ^C to cancel the install..."
-sleep 3
+echo "> Proceeding in 5 seconds..."
+sleep 2
+echo "> in 3 seconds"
+sleep 1
+echo "> in 2 seconds"
+sleep 1
+echo "> in 1 second"
+sleep 1
 
 touch install.log
 
@@ -41,4 +48,7 @@ echo "> Remove os probe"
 apt remove os-prober -y >> install.log
 
 echo "> Install done!"
-sleep 3
+echo "> Rebooting server in 5 seconds"
+sleep 5
+echo "> Rebooting..."
+reboot
