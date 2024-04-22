@@ -28,7 +28,7 @@ wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/
 
 echo "> Installing packages..."
 apt update -y >> install.log
-apt full-upgrade >> install.log
+apt full-upgrade -y >> install.log
 
 echo "> Installing proxmox kernel..."
 apt install proxmox-default-kernel -y >> install.log
